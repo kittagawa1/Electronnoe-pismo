@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb);
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  max-width: 560px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.invite-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.invite-header h1 {
+  font-size: 28px;
+  color: #1e3c72;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.invite-text {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.invite-text p + p {
+  margin-top: 10px;
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 11px 14px;
+  border: 1.5px solid #d5dbe3;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #f9fafc;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.15);
+  background: #fff;
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: #2a5298;
+  cursor: pointer;
+}
+
+.checkbox label {
+  font-weight: 400;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+
+.btn {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e3c72, #6a11cb);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+  margin-top: 6px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.form-msg {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+.form-msg.success { color: #1a9e5c; }
+.form-msg.error   { color: #d9342b; }
